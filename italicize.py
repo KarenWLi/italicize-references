@@ -48,16 +48,16 @@ for p in doc.paragraphs:
 
         if len(edited) == 0:   
             
-            beginning = p.text[0:s+3]
-            italics = p.text[s+3: e-2]
+            beginning = p.text[0:s+2]
+            italics = p.text[s+2: e-2]
             end = p.text[e-2:len(p.text)-1]
 
         else:
             for editor in editors:
                 t = editor.start()
 
-                beginning = p.text[0:s+3]
-                italics = p.text[s+3: t]
+                beginning = p.text[0:s+2]
+                italics = p.text[s+2: t]
                 end = p.text[t:len(p.text)-1]
     
     if no_journal and no_title:
